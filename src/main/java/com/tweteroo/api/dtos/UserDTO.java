@@ -6,7 +6,6 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
-
 public class UserDTO {
     private static final String URL_PATTERN = "^https?://\\S+$";
 
