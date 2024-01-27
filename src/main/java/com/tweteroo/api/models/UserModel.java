@@ -1,23 +1,22 @@
 package com.tweteroo.api.models;
 
-import com.tweteroo.dtos.UserDTO;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+
+import com.tweteroo.api.dtos.UserDTO;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -31,7 +30,7 @@ public class UserModel {
   
     public UserModel(UserDTO dto) {
       this.avatar = dto.getAvatar();
-      this.username = dto.getUsername();
+      this.userName = dto.getUserName();
     }
 
 }

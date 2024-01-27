@@ -19,7 +19,7 @@ public class UserService{
         if(userRepository.existsByUserName(userDTO.getUserName())){
             return Optional.empty();
         }
-        User newUser = new User(userDTO);
+        UserModel newUser = new UserModel(userDTO);
         return Optional.of(userRepository.save((newUser)));
     }
 }

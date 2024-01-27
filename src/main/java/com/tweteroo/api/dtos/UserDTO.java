@@ -8,7 +8,6 @@ import lombok.Data;
 @Data
 
 public class UserDTO {
-
     private static final String URL_PATTERN = "^https?://\\S+$";
 
     @NotBlank(message = "Avatar must not be blank")
@@ -16,6 +15,6 @@ public class UserDTO {
     private String avatar;
 
     @NotBlank(message = "Username must not be blank")
-    @Size(max = 100, message = "UserName could not be more than one hundred characters long")
-    private String username;
+    @Size(max = 100, message = "UserName must have a maximum of one hundred characters")
+    private String userName;
 }
