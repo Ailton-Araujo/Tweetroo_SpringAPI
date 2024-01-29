@@ -30,7 +30,7 @@ public class UserModel {
   
     public UserModel(UserDTO dto) {
       this.avatar = dto.getAvatar();
-      this.userName = dto.getUserName();
+      this.userName = dto.getUsername();
     }
 
 }

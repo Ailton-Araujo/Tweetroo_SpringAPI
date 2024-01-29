@@ -15,5 +15,5 @@ public class UserDTO {
 
     @NotBlank(message = "Username must not be blank")
     @Size(max = 100, message = "UserName must have a maximum of one hundred characters")
-    private String userName;
+    private String username;
 }

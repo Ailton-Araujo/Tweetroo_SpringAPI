@@ -16,7 +16,7 @@ public class UserService{
     }
 
     public Optional<UserModel> createUser(UserDTO userDTO){
-        if(userRepository.existsByUserName(userDTO.getUserName())){
+        if(userRepository.existsByUserName(userDTO.getUsername())){
             return Optional.empty();
         }
         UserModel newUser = new UserModel(userDTO);
