@@ -26,11 +26,11 @@ public class UserModel {
     private String avatar;
   
     @Column(nullable = false, length = 100)
-    private String userName;
+    private String username;
   
     public UserModel(UserDTO dto) {
       this.avatar = dto.getAvatar();
-      this.userName = dto.getUsername();
+      this.username = dto.getUsername();
     }
 
 }
